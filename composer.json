@@ -4,12 +4,7 @@
 	"type": "project",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
-	"support": {
-		"forum": "http://forum.codeigniter.com/",
-		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
-		"slack": "https://codeigniterchat.slack.com",
-		"source": "https://github.com/bcit-ci/CodeIgniter"
-	},
+	
 	"require": {
 		"php": ">=5.3.7"
 	},
@@ -19,5 +14,10 @@
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*",
 		"phpunit/phpunit": "4.* || 5.*"
-	}
+	},
+    "autoload": {
+        "psr-4": {
+            "Firebase\\JWT\\": "src"
+        }
+    }
 }

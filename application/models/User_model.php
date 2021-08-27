@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
                         
 class User_model extends CI_Model {
-                        
+	protected $user_table = 'user';                 
   public function login_submit($data){
 
     $userdata = array(
@@ -65,9 +65,26 @@ class User_model extends CI_Model {
     $this->db->insert('logs', $data);
     return $this->db->affected_rows();
   }
+	public function lists(){
+
+		$data = $this->db->get("user");
+
+		return $data->result();
+
+}
                         
-                            
-                        
+public function user_login($username, $password)
+{
+
+	 $this->db->where('username', $username);
+	 $this->db->where('password',md5($password));
+        $result = $this->db->get($this->user_table)->row();
+        if($result){
+            return $result;
+     	}else{
+     		return 0;
+     	}
+    }
 }
                         
 /* End of file User.php */
