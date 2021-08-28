@@ -18,7 +18,7 @@
 			float: left;
 			font-family: sans-serif;
 			font-weight: bold;
-			font-size: 70px;
+			font-size: 30px;
 			overflow: hidden;
 			white-space: nowrap;
 			animation: typing 10s steps(100) 1s infinite alternate;

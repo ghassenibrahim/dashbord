@@ -165,8 +165,19 @@ a.socialIcon:hover,
 										<?php echo $this->session->flashdata('message'); ?>
                     <h1>Login</h1>
                     <p class="text-muted"> Please enter your login and password!</p> 
-					<input type="text" name="username" value="<?php echo $this->session->flashdata('username'); ?>" placeholder="Username">
-					<input type="password" name="password" value="<?php echo $this->session->flashdata('password'); ?>" placeholder="Password"> 
+
+
+				
+					 <div class="form-group">
+							<input   name="username"  required="" value="<?php echo $this->session->flashdata('username'); ?>" placeholder="username" class="form-control" type="text">
+						</div>
+							<div class="form-group">
+								<input   name="password" required="" value="<?php echo $this->session->flashdata('password'); ?>" placeholder="password" class="form-control" type="text">
+							</div>
+
+
+
+
 					<a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit"  value="Login" >
 					
                     <div class="col-md-12">

@@ -60,7 +60,7 @@ public function login_submit()
     </div>');
     $this->session->set_flashdata('username', $this->input->post('username'));
     $this->session->set_flashdata('password', $this->input->post('password'));
-    redirect(base_url('login'));
+    redirect(('login'));
   }
 }
         
