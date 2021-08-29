@@ -13,10 +13,18 @@ class User_model extends CI_Model {
 
     
     $this->db->where($userdata);
-
-    return $this->db->get('user')->result_array()[0];
-                                  
-  } 
+		
+		$a=null;
+		$result=$this->db->get('user')->result_array();
+			 if (isset($result[0])){
+				 $a=$result[0];
+			 }else {
+					 $a=null;
+			 }
+			 
+			 return  $a;
+																 
+		 } 
 
   public function get_users(){ 
     return $this->db->get('user')->result_array(); 

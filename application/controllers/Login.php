@@ -24,10 +24,10 @@ public function login_submit()
 {
                
   $data = $this->input->post();
-
+  
   $result = $this->user_model->login_submit($data);
 
-  if(!is_null($result)){
+  if(isset($result)){
 
     $session = array(
       'user_id' => $result['user_id'],
